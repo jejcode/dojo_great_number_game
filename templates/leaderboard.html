@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Great Leaders of the Great Number Game</h1>
+        <div id="table_holder">
+            <table class="table table-hover col-3">
+                <thead class="table-dark">
+                    <th scope="col">Name</th>
+                    <th scope="col">Tries</th>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for dict in session['leaders'] %}
+                        <tr>
+                            <td>{{dict['name']}}</td>
+                            <td>{{dict['tries']}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+    
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>

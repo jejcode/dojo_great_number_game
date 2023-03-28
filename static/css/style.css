@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div#wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form#guess_form {
+    background-color: rgb(29, 30, 32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+label {
+    color: rgb(255, 180, 50);
+}
+input[type="number"] {
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: rgb(255, 180, 50);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#reset{
+    background-color: cornflowerblue;
+    margin-bottom: 20px;
+}
+
+p {
+    color: rgb(255, 180, 50);
+    padding: 20px;
+}
+
+.wrong_guess {
+    background-color: red;
+}
+
+.correct_guess {
+    background-color: green;
+}
+
+div#table_holder {
+    width: 400px;
+}
